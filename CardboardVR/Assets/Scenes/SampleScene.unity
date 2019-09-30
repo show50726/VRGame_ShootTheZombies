@@ -1826,6 +1826,7 @@ MonoBehaviour:
   hp: 100
   maxhp: 100
   GameOverUI: {fileID: 299444068}
+  isDead: 0
   ScoreText: {fileID: 1670608527}
 --- !u!82 &1902646035
 AudioSource:
