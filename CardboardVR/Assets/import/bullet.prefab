@@ -32,7 +32,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.50073004, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_Children:
-  - {fileID: 1922664979692744540}
+  - {fileID: 9008911967978995093}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -110,7 +110,7 @@ MonoBehaviour:
   moveSpeed: 10
   hit_effect: {fileID: 100008, guid: 8f611da60097c85438a2947021f045cf, type: 3}
   LifeTime: 10
-  type: 3
+  type: 1
   r: 0.1
 --- !u!54 &-1305847805599887141
 Rigidbody:
@@ -128,7 +128,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 3
---- !u!1001 &1922664979692877272
+--- !u!1001 &9008911967978596113
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -183,75 +183,19 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 0.01
-      objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: a89abc0d2591545288f4c041059ae633, type: 3}
       propertyPath: InitialModule.startRotationX.minMaxState
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 19800002, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800002, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: lengthInSec
-      value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800002, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: looping
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800000, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: looping
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800004, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startRotationY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800006, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startSizeY.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800006, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startSizeZ.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800006, guid: a89abc0d2591545288f4c041059ae633, type: 3}
-      propertyPath: InitialModule.startRotationX.minMaxState
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 19800006, guid: a89abc0d2591545288f4c041059ae633, type: 3}
       propertyPath: InitialModule.startRotationY.minMaxState
       value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a89abc0d2591545288f4c041059ae633, type: 3}
---- !u!4 &1922664979692744540 stripped
+--- !u!4 &9008911967978995093 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400004, guid: a89abc0d2591545288f4c041059ae633,
     type: 3}
-  m_PrefabInstance: {fileID: 1922664979692877272}
+  m_PrefabInstance: {fileID: 9008911967978596113}
   m_PrefabAsset: {fileID: 0}

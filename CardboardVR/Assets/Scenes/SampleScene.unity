@@ -1362,7 +1362,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 498412, guid: 970dd4b9371394fb4890965f608d46fd, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 498412, guid: 970dd4b9371394fb4890965f608d46fd, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1419,7 +1419,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 766346198, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 766346198, guid: 463285ecd6702471a909ba810832bf0e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1807,6 +1807,10 @@ MonoBehaviour:
   spawnDis: 10
   EnemyType:
   - {fileID: 8178530247626451525, guid: 72b01fcc5ad8b8c4b962d339a436b5f2, type: 3}
+  ItemType:
+  - {fileID: 1000013846074356, guid: 11e31a2ebb4e6e246bcf8c0ba034a031, type: 3}
+  - {fileID: 1000012970591572, guid: 7cafb89b5a0f61f479d0a748962abbbc, type: 3}
+  - {fileID: 1000013317980782, guid: 2cf6690298568294cb6b655c0a3aeb87, type: 3}
   time_threshold: 50
   upper_bound: 15
   spawnPeriod: 3
@@ -1823,7 +1827,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a02719c13f631f4aaec0392fb32e1d0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 4486791096911251978, guid: ef21dc6274f01a04597dcddd3794a093, type: 3}
+  bullet:
+  - {fileID: 4486791096911251978, guid: ef21dc6274f01a04597dcddd3794a093, type: 3}
+  - {fileID: 4486791096911251978, guid: f6c012dfb941dbc49b02fe08278ebc7e, type: 3}
+  - {fileID: 4486791096911251978, guid: d52fdd6af6e4b3843b49458493101b4c, type: 3}
+  bulletType: 0
   hp: 100
   maxhp: 100
   GameOverUI: {fileID: 299444068}
@@ -2015,7 +2023,7 @@ Transform:
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2091292325
 GameObject:

@@ -6,7 +6,8 @@ using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-    public GameObject bullet;
+    public GameObject[] bullet;
+    public int bulletType = 0;
     public int hp = 100;
     public int maxhp = 100;
     /*
@@ -19,6 +20,11 @@ public class Player : MonoBehaviour
     private int score = 0;
     private AudioSource _as;
     //private CardboardHead head;
+
+    public void changeBulletType(int type)
+    {
+        bulletType = type;
+    }
 
     // Start is called before the first frame update
     void Start()
@@ -49,7 +55,7 @@ public class Player : MonoBehaviour
     {
         _as.Play();
         GameObject obj;
-        obj = Instantiate(bullet, transform.position + Camera.main.transform.forward, transform.rotation);
+        obj = Instantiate(bullet[bulletType], transform.position + Camera.main.transform.forward, transform.rotation);
         obj.GetComponent<Bullet>().moveDir = Camera.main.transform.forward;
     }
 
