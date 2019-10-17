@@ -1810,6 +1810,7 @@ MonoBehaviour:
   time_threshold: 50
   upper_bound: 15
   spawnPeriod: 3
+  _time_record: 0
 --- !u!114 &1902646034
 MonoBehaviour:
   m_ObjectHideFlags: 0

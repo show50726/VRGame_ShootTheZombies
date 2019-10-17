@@ -39,7 +39,8 @@ public class EnemyMovement : MonoBehaviour
     {
         anim.SetBool("isDead", true);
         GameObject.FindGameObjectWithTag("Player").GetComponent<Player>().addScore(10);
-        StartCoroutine(_wait(10f));
+        GameObject.FindGameObjectWithTag("Player").GetComponent<EnemySpawner>().decreaseEnemy();
+        StartCoroutine(_wait(5f));
     }
 
     IEnumerator _wait(float _time)

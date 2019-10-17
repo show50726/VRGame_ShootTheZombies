@@ -13,12 +13,17 @@ public class EnemySpawner : MonoBehaviour
 
     private int amount = 0;
     private float time_record = 0;
-    private float _time_record = 0;
+    public float _time_record = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         
+    }
+
+    public void decreaseEnemy()
+    {
+        amount--;
     }
 
     // Update is called once per frame
@@ -34,11 +39,16 @@ public class EnemySpawner : MonoBehaviour
                 limit++;
                 time_threshold *= 1.5f;
                 time_record = 0;
+                if(spawnPeriod - 0.2f > 0)
+                {
+                    spawnPeriod -= 0.2f;
+                }
             }
         }
 
         if (amount < limit && _time_record >= spawnPeriod)
         {
+            Debug.Log("Spawn");
             float angle = Random.Range(0f, 360f);
             float x = spawnDis * Mathf.Cos(angle);
             float y = spawnDis * Mathf.Sin(angle);
