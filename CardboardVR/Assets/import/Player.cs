@@ -34,7 +34,7 @@ public class Player : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0) && !isDead)
         {
-            Debug.Log("!!!");
+            //Debug.Log("!!!");
             launch();
         }
 

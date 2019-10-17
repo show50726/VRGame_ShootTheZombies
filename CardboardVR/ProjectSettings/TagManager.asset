@@ -7,6 +7,8 @@ TagManager:
   - Enemy
   - Bullet
   - PlayerBox
+  - FxTemporaire
+  - Floor
   layers:
   - Default
   - TransparentFX
