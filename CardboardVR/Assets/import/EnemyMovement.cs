@@ -9,6 +9,7 @@ public class EnemyMovement : MonoBehaviour
     public int hp = 100;
     public bool isDead = false;
     public Animator anim;
+
     private AudioSource _as;
     void Start()
     {
@@ -33,6 +34,14 @@ public class EnemyMovement : MonoBehaviour
             isDead = true;
             Dead();
         }
+    }
+
+    public void toDead()
+    {
+        _as.Play();
+        hp -= 1000;
+        isDead = true;
+        Dead();
     }
     
     public void Dead()
