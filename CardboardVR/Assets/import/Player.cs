@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+
 public class Player : MonoBehaviour
 {
     [Header("Player Info")]
@@ -11,6 +12,7 @@ public class Player : MonoBehaviour
     public int bulletType = 0;
     public int hp = 100;
     public int maxhp = 100;
+    public float moveSpeed = 3f;
     /*
     public Text hpText;
     */
@@ -28,7 +30,8 @@ public class Player : MonoBehaviour
     private AudioSource _as;
     private EnemySpawner es;
     private float ft, lt;
-
+    private bool isStart = false;
+    private Vector3 moveVec;
     //private CardboardHead head;
 
     public void changeBulletType(int type)
@@ -43,16 +46,42 @@ public class Player : MonoBehaviour
         es = GetComponent<EnemySpawner>();
         //head = Camera.main.GetComponent<StereoController>().Head;
         GameOverUI.SetActive(false);
+        isStart = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        moveVec = Vector3.zero;
+        if(Vector3.Dot(Camera.main.transform.forward, Vector3.down) >= Mathf.Sqrt(2) / 2 && isStart)
+        {
+            Vector3 dir = Camera.main.transform.forward;
+            dir.y = 0;
+            //transform.Translate(moveSpeed * Time.deltaTime * dir);
+            moveVec += moveSpeed * Time.deltaTime * dir;
+        }
+
+        if (Vector3.Dot(Camera.main.transform.right, Vector3.down) >= Mathf.Sqrt(2) / 2 && isStart)
+        {
+            Vector3 dir = Camera.main.transform.right;
+            dir.y = 0;
+            //transform.Translate(moveSpeed * Time.deltaTime * dir);
+            moveVec += moveSpeed * Time.deltaTime * dir;
+        }
+
+        if (Vector3.Dot(-Camera.main.transform.right, Vector3.down) >= Mathf.Sqrt(2) / 2 && isStart)
+        {
+            Vector3 dir = -Camera.main.transform.right;
+            dir.y = 0;
+            //transform.Translate(moveSpeed * Time.deltaTime * dir);
+            moveVec += moveSpeed * Time.deltaTime * dir;
+        }
+
         if (Input.GetMouseButtonDown(0) && !isDead)
         {
             ft = Time.time;
             launch();
+            isStart = true;
         }
         
         if(Input.GetMouseButtonUp(0) && !isDead)
@@ -75,6 +104,11 @@ public class Player : MonoBehaviour
         
     }
 
+
+    private void LateUpdate()
+    {
+        transform.Translate(moveSpeed * Time.deltaTime * moveVec);
+    }
     public void launch()
     {
         _as.Play();
@@ -112,6 +146,7 @@ public class Player : MonoBehaviour
         isDead = true;
         //ScoreText.text = "Your Score : " + score;
         GameOverUI.SetActive(true);
+        isStart = false;
     }
 
     IEnumerator _spell(int spellType)
